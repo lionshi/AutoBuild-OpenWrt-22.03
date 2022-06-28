@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt 22.03 Gee4-Clash (hiwifi hc5962)
+name: Build OpenWrt 22.03 GL-MT1300-clash
 
 on:
   repository_dispatch:
