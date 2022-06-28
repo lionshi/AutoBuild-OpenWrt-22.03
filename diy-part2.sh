@@ -12,3 +12,14 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+echo "uci -q batch << EOI
+set network.lan.ipaddr='192.168.10.1'
+commit network
+set wireless.@wifi-device[0].disabled='0'
+set wireless.@wifi-iface[0].ssid='OpenWrt2022'
+commit wireless
+set system.@system[-1].timezone='CST-8'
+set system.@system[-1].zonename='Asia/Shanghai'
+commit system
+EOI" > package/base-files/files/etc/uci-defaults/99-custom
+#eof
