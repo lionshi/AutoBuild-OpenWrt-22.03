@@ -15,8 +15,7 @@
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall;luci' >>feeds.conf.default
+echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git' >>feeds.conf.default
 echo 'src-git openclash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
 #echo 'src-git redsocks2 https://github.com/semigodking/redsocks.git' >>feeds.conf.default
@@ -25,6 +24,4 @@ git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/lionshi/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-git clone https://github.com/mchome/openwrt-vlmcsd.git package/vlmcsd
-git clone https://github.com/mchome/luci-app-vlmcsd.git package/luci-app-vlmcsd
 #eof

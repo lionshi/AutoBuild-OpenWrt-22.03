@@ -21,5 +21,10 @@ commit wireless
 set system.@system[-1].timezone='CST-8'
 set system.@system[-1].zonename='Asia/Shanghai'
 commit system
+del dhcp.lan.ra
+del dhcp.lan.ra_slaac
+del dhcp.lan.ra_flags
+del dhcp.lan.dhcpv6
+commit dhcp
 EOI" > package/base-files/files/etc/uci-defaults/99-custom
 #eof
