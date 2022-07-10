@@ -15,8 +15,16 @@
 echo "uci -q batch << EOI
 set network.lan.ipaddr='192.168.10.1'
 commit network
-set wireless.@wifi-device[0].disabled='0'
+set wireless.radio0.htmode='HT20'
+set wireless.radio0.band='2g'
+set wireless.radio0.channel='auto'
 set wireless.@wifi-iface[0].ssid='OpenWrt2022'
+set wireless.@wifi-device[0].disabled='0'
+set wireless.radio1.htmode='VHT40'
+set wireless.radio1.band='5g'
+set wireless.radio1.channel='auto'
+set wireless.@wifi-iface[1].ssid='OpenWrt2022-5G'
+set wireless.@wifi-device[1].disabled='0'
 commit wireless
 set system.@system[-1].timezone='CST-8'
 set system.@system[-1].zonename='Asia/Shanghai'
